@@ -198,6 +198,38 @@
         <rotorVelocitySlowdownSim>1</rotorVelocitySlowdownSim>
       </rotor>
     </plugin>
-
+    <plugin name="ros_logical_camera" filename="libROSLogicalCameraPlugin.so">
+      <robotNamespace>ariac</robotNamespace>
+      <position_noise>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.001</stddev>
+        </noise>
+      </position_noise>
+      <orientation_noise>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </orientation_noise>
+      <known_model_types>
+        <type>kit_tray</type>
+        <type>part1</type>
+        <type>part2</type>
+        <type>part3</type>
+        <type>part4</type>
+        <type>arm_part</type>
+        <type>cross_joint_part</type>
+        <type>disk_part</type>
+        <type>gasket_part</type>
+        <type>gear_part</type>
+        <type>piston_rod_part</type>
+        <type>pulley_part</type>
+        <type>t_brace_part</type>
+        <type>u_joint_part</type>
+      </known_model_types>
+    </plugin>
   </model>
 </sdf>
